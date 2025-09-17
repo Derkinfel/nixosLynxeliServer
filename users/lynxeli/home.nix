@@ -2,8 +2,8 @@
 
 {
 	home = {
-		username = "derkinfel";
-		homeDirectory = "/home/derkinfel";
+		username = "lynxeli";
+		homeDirectory = "/home/lynxeli";
 		stateVersion = "25.05";
 		file = {
 			"bin".source = "${user_scripts}/";
@@ -13,8 +13,8 @@
 	programs = {
 		git = {
 			enable = true;
-			userName = "derkinfel";
-			userEmail = "derkinfel@gmail.com";
+			userName = "lynxeli";
+			userEmail = "lynxeli@gmail.com";
 		};
 	};
 }

@@ -56,7 +56,7 @@ nixos-generate-config --root /mnt
 
 cd /mnt/etc/nixos/
 
-git clone https://github.com/derkinfel/nixosLynxeliServer
+git clone https://github.com/lynxeli/nixosLynxeliServer
 
 mv ./configuration.nix ./nixosLynxeliServer/hosts/homelab
 
