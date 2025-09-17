@@ -17,7 +17,7 @@
     deploy-rs.url = "github:serokell/deploy-rs";
 	};
 	outputs = { self, nixpkgs, home-manager, sops-nix, user_scripts, deploy-rs, ... }@inputs: {
-		nixosConfigurations.homelab-i5-7600 = nixpkgs.lib.nixosSystem {
+		nixosConfigurations.nixosServer = nixpkgs.lib.nixosSystem {
 			system = "x86_64-linux";
 			modules = [
 				./hosts
@@ -33,16 +33,5 @@
 				sops-nix.nixosModules.sops
 			];
 		};
-    deploy.nodes.homelab-i7-9700k = {
-        hostname = "192.168.0.164";
-        sshUser = "root";
-        activationTimeout = 1200;
-        confirmTimeout    = 360;
-        magicRollback     = true;
-        profiles.system = {
-          user = "root";
-          path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.homelab-i5-7600;
-      };
-    };
 	};
 }

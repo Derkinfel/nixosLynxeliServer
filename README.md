@@ -40,7 +40,9 @@ cd /mnt/etc/nixos/
 
 git clone https://github.com/derkinfel/nixosLynxeliServer
 
-mv ./configuration.nix ./nixosLynxeliServer
+mv ./configuration.nix ./nixosLynxeliServer/hosts/homelab
 
-mv ./hardware-configuration.nix ./nixosLynxeliServer
+mv ./hardware-configuration.nix ./nixosLynxeliServer/hosts/homelab
+
+nixos-install --flake ./nixosLynxeliServer#nixosServer
 <pre> ```
