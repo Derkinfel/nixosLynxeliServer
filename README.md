@@ -18,18 +18,27 @@ nvme0n1     259:0    0 232.9G  0 disk
 drive="CHANGE_DRIVE_NAME" # usually it's either sda or nvme0n1
 ###### put there partition names instead of CHANGE_TO_PARTITION_X
 bootPartition="CHANGE_TO_PARTITION_1" # usually either sda1 or nvme0n1p1
+
 rootPartition="CHANGE_TO_PARTITION_2" # usually either sda2 or nvme0n1p2
 
 mkfs.fat -F 32 "/dev/$drive"
+
 fatlabel "/dev/$bootPartition" NIXBOOT
+
 mkfs.ext4 "/dev/$rootPartition" -L NIXROOT
 
 mount "/dev/$rootPartition" /mnt
+
 mkdir /mnt/boot
+
 mount "/dev/$bootPartition" /mnt/boot
+
 nixos-generate-config --root /mnt
 
 cd /mnt/etc/nixos/
+
 git clone https://github.com/derkinfel/nixosLynxeliServer
+
 mv ./configuration.nix ./nixosLynxeliServer
+
 mv ./hardware-configuration.nix ./nixosLynxeliServer
