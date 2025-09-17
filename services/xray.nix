@@ -1,0 +1,5 @@
+{
+  services.xray = {
+    enable = true;
+  };
+}

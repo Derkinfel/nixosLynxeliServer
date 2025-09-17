@@ -1,0 +1,9 @@
+keys:
+  - &homelab-i5-7600 age1xvajy5dpuhhqk640ldydy7hlgklwm8uzm26q7tsue9xcagyq8u7sy4u7u2
+  - &masterPC age19nu7etaa302t380t9a3w4eqacwe6ydjplsu094yxe3h8n58xkfpqyxskka
+creation_rules:
+  - path_regex: secrets/*
+    key_groups:
+    - age:
+      - *homelab-i5-7600
+      - *masterPC
