@@ -21,13 +21,13 @@
 			modules = [
 				./hosts
 				./services
-				home-manager.nixosModules.home-manager {
-					home-manager.useGlobalPkgs = true;
-					home-manager.useUserPackages = true;
-					home-manager.users.lynxeli = { pkgs, ... }: {
-						imports = [ ./users/lynxeli ];
-					};
-				}
+        # home-manager.nixosModules.home-manager {
+				# 	home-manager.useGlobalPkgs = true;
+				# 	home-manager.useUserPackages = true;
+				# 	home-manager.users.lynxeli = { pkgs, ... }: {
+				# 		imports = [ ./users/lynxeli ];
+				# 	};
+				# }
 				sops-nix.nixosModules.sops
 			];
 		};
