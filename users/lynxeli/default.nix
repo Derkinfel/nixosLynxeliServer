@@ -1,4 +1,3 @@
-{ user_scripts, ... }:
 {
 	imports = [
 		./packages.nix

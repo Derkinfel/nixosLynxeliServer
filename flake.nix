@@ -14,9 +14,8 @@
 			url = "github:Mic92/sops-nix";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
-    deploy-rs.url = "github:serokell/deploy-rs";
 	};
-	outputs = { self, nixpkgs, home-manager, sops-nix, user_scripts, deploy-rs, ... }@inputs: {
+	outputs = { self, nixpkgs, home-manager, sops-nix, ... }@inputs: {
 		nixosConfigurations.nixosServer = nixpkgs.lib.nixosSystem {
 			system = "x86_64-linux";
 			modules = [
@@ -27,7 +26,6 @@
 					home-manager.useUserPackages = true;
 					home-manager.users.derkinfel = { pkgs, ... }: {
 						imports = [ ./users/lynxeli ];
-						_module.args.user_scripts = user_scripts;
 					};
 				}
 				sops-nix.nixosModules.sops
