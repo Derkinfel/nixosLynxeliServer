@@ -4,52 +4,10 @@
 		gh
 		wget
 		sing-box
-		jellyfin
-		transmission_4
-		deluge
-		radarr
-		bazarr
-		sonarr
-		prowlarr
-		lidarr
-		readarr
-		whisparr  
-		sabnzbd
-		audiobookshelf
-		microbin
-		miniflux
-		nextcloud31
-		uptime-kuma
-		navidrome
-		prometheus
-		plex
-		mpv
-		mpc
-		kubectl
-		kubernetes-helm
-		k9s
-		stern
-		beets
-		pciutils
-		tree
-		ffmpeg-full
-		libvdpau
-		vdpauinfo
-		jellyfin-ffmpeg
 		btop
 		gnupg
 		pinentry
 		age
 		sops
-		lokinet
-		docker
-		nodejs
-		neovim
-		lsof
-		jq
-		taskwarrior3
-		codeberg-cli
-		smartmontools
-		hledger
 	];
 }
