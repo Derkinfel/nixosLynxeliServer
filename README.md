@@ -1,4 +1,5 @@
 <pre> ```
+original manual: https://nixos.wiki/wiki/NixOS_Installation_Guide
 lsblk # search for the drive to install nixos on 
 ###### example output:
 [root@nixos:/mnt/etc/nixos]# lsblk
