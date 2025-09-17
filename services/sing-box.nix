@@ -1,5 +1,6 @@
 {
   services.sing-box = {
+    enable = true;
     settings = {
 	    log = {
 	    	level = "debug";
