@@ -1,6 +1,7 @@
+<pre> ```
 lsblk # search for the drive to install nixos on 
 ###### example output:
-[<pre> ```root@nixos:/mnt/etc/nixos]# lsblk
+[root@nixos:/mnt/etc/nixos]# lsblk
 NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
 loop0         7:0    0   1.4G  1 loop /nix/.ro-store
 sda           8:0    0   1.8T  0 disk 
@@ -13,7 +14,6 @@ sdb           8:16   1  57.3G  0 disk
 nvme0n1     259:0    0 232.9G  0 disk 
 ├─nvme0n1p1 259:5    0   500M  0 part /mnt
 └─nvme0n1p2 259:6    0 232.4G  0 part /mnt/boot
-<pre> ```
 
 ###### put there drive name instead of CHANGE_DRIVE_NAME
 drive="CHANGE_DRIVE_NAME" # usually it's either sda or nvme0n1
@@ -43,3 +43,4 @@ git clone https://github.com/derkinfel/nixosLynxeliServer
 mv ./configuration.nix ./nixosLynxeliServer
 
 mv ./hardware-configuration.nix ./nixosLynxeliServer
+<pre> ```
