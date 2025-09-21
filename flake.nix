@@ -14,8 +14,12 @@
 			url = "github:Mic92/sops-nix";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+    deploy-rs = {
+      url = "github:serokell/deploy-rs";
+      # flake = false;
+    };
 	};
-	outputs = { self, nixpkgs, home-manager, sops-nix, ... }@inputs: {
+	outputs = { self, nixpkgs, home-manager, sops-nix, deploy-rs, ... }@inputs: {
 		nixosConfigurations.nixosServer = nixpkgs.lib.nixosSystem {
 			system = "x86_64-linux";
 			modules = [
@@ -31,5 +35,16 @@
 				sops-nix.nixosModules.sops
 			];
 		};
-	};
+    deploy.nodes.nixosServer = {
+      hostname = "212.192.246.121";
+      sshUser = "root";
+      activationTimeout = 600;
+      confirmTimeout    = 180;
+      magicRollback     = true;
+      profiles.system = {
+        user = "root";
+        path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.nixosServer;
+      };
+    };
+  };
 }

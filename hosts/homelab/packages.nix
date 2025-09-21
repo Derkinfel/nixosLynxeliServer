@@ -9,5 +9,6 @@
 		pinentry
 		age
 		sops
+    speedtest-cli
 	];
 }
