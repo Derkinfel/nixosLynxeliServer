@@ -37,6 +37,7 @@
 		};
     deploy.nodes.nixosServer = {
       hostname = "212.192.246.121";
+      # hostname = "103.231.73.243";
       sshUser = "root";
       activationTimeout = 600;
       confirmTimeout    = 180;
